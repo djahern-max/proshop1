@@ -1,0 +1,22 @@
+{
+  "name": "proshop1",
+  "version": "1.0.0",
+  "description": "MERN e-commerce app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djahern-max/proshop1.git"
+  },
+  "author": "Claire Ahern",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djahern-max/proshop1/issues"
+  },
+  "homepage": "https://github.com/djahern-max/proshop1#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -22,8 +22,8 @@ const importData = async () => {
 
     const adminUser = createdUsers[0]._id
 
-    const sampleProducts = products.map(product => {
-      return {...product, user: adminUser}
+    const sampleProducts = products.map((product) => {
+      return { ...product, user: adminUser }
     })
 
     await Product.insertMany(sampleProducts)
@@ -42,7 +42,7 @@ const destroyData = async () => {
     await Product.deleteMany()
     await User.deleteMany()
 
-     console.log('Data Destroyed!'.red.inverse)
+    console.log('Data Destroyed!'.red.inverse)
     process.exit()
   } catch (error) {
     console.error(`${error}`.red.inverse)
@@ -51,7 +51,7 @@ const destroyData = async () => {
 }
 
 if (process.argv[2] === '-d') {
-    destroyData()
-}else{
-    importData()
+  destroyData()
+} else {
+  importData()
 }

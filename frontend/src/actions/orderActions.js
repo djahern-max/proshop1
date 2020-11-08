@@ -6,12 +6,15 @@ import {
   ORDER_DETAILS_FAIL,
   ORDER_DETAILS_SUCCESS,
   ORDER_DETAILS_REQUEST,
+<<<<<<< HEAD
   ORDER_PAY_FAIL,
   ORDER_PAY_SUCCESS,
   ORDER_PAY_REQUEST,
   ORDER_LIST_MY_REQUEST,
   ORDER_LIST_MY_SUCCESS,
   ORDER_LIST_MY_FAIL,
+=======
+>>>>>>> 4295326ebb91ad8a812eacfb54a95d7e59024e81
 } from '../constants/orderConstants'
 
 export const createOrder = (order) => async (dispatch, getState) => {
@@ -80,6 +83,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
     })
   }
 }
+<<<<<<< HEAD
 
 export const payOrder = (orderId, paymentResult) => async (
   dispatch,
@@ -154,3 +158,5 @@ export const listMyOrders = () => async (dispatch, getState) => {
     })
   }
 }
+=======
+>>>>>>> 4295326ebb91ad8a812eacfb54a95d7e59024e81

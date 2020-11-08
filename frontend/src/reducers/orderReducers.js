@@ -5,6 +5,7 @@ import {
   ORDER_DETAILS_REQUEST,
   ORDER_DETAILS_SUCCESS,
   ORDER_DETAILS_FAIL,
+<<<<<<< HEAD
   ORDER_PAY_REQUEST,
   ORDER_PAY_FAIL,
   ORDER_PAY_SUCCESS,
@@ -13,6 +14,8 @@ import {
   ORDER_LIST_MY_SUCCESS,
   ORDER_LIST_MY_FAIL,
   ORDER_LIST_MY_RESET,
+=======
+>>>>>>> 4295326ebb91ad8a812eacfb54a95d7e59024e81
 } from '../constants/orderConstants'
 
 export const orderCreateReducer = (state = {}, action) => {
@@ -61,6 +64,7 @@ export const orderDetailsReducer = (
       return state
   }
 }
+<<<<<<< HEAD
 
 export const orderPayReducer = (state = {}, action) => {
   switch (action.type) {
@@ -107,3 +111,5 @@ export const orderListMyReducer = (state = { orders: [] }, action) => {
       return state
   }
 }
+=======
+>>>>>>> 4295326ebb91ad8a812eacfb54a95d7e59024e81

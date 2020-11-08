@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { PayPalButton } from 'react-paypal-button-v2'
@@ -8,20 +9,35 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getOrderDetails, payOrder } from '../actions/orderActions'
 import { ORDER_PAY_RESET } from '../constants/orderConstants'
+=======
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { Button, Row, Col, ListGroup, Image, Card } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
+import Message from '../components/Message'
+import Loader from '../components/Loader'
+import { getOrderDetails } from '../actions/orderActions'
+>>>>>>> 4295326ebb91ad8a812eacfb54a95d7e59024e81
 
 const OrderScreen = ({ match }) => {
   const orderId = match.params.id
 
+<<<<<<< HEAD
   const [sdkReady, setSdkReady] = useState(false)
 
+=======
+>>>>>>> 4295326ebb91ad8a812eacfb54a95d7e59024e81
   const dispatch = useDispatch()
 
   const orderDetails = useSelector((state) => state.orderDetails)
   const { order, loading, error } = orderDetails
 
+<<<<<<< HEAD
   const orderPay = useSelector((state) => state.orderPay)
   const { loading: loadingPay, success: successPay } = orderPay
 
+=======
+>>>>>>> 4295326ebb91ad8a812eacfb54a95d7e59024e81
   if (!loading) {
     //   Calculate prices
     const addDecimals = (num) => {
@@ -34,6 +50,7 @@ const OrderScreen = ({ match }) => {
   }
 
   useEffect(() => {
+<<<<<<< HEAD
     const addPayPalScript = async () => {
       const { data: clientId } = await axios.get('/api/config/paypal')
       const script = document.createElement('script')
@@ -62,6 +79,10 @@ const OrderScreen = ({ match }) => {
     console.log(paymentResult)
     dispatch(payOrder(orderId, paymentResult))
   }
+=======
+    dispatch(getOrderDetails(orderId))
+  }, [])
+>>>>>>> 4295326ebb91ad8a812eacfb54a95d7e59024e81
 
   return loading ? (
     <Loader />
@@ -173,6 +194,7 @@ const OrderScreen = ({ match }) => {
                   <Col>${order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
+<<<<<<< HEAD
               {!order.isPaid && (
                 <ListGroup.Item>
                   {loadingPay && <Loader />}
@@ -186,6 +208,8 @@ const OrderScreen = ({ match }) => {
                   )}
                 </ListGroup.Item>
               )}
+=======
+>>>>>>> 4295326ebb91ad8a812eacfb54a95d7e59024e81
             </ListGroup>
           </Card>
         </Col>
